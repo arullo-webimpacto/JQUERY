@@ -20,6 +20,15 @@
 	
 	<h1>Tabla de multiplicar</h1>
 	<hr>
+
+	<select id="base" class="form-control">
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5" selected>5</option>
+		<option value="6">6</option>
+	</select>
+	<br>
+
 	<button id="bot1" class="btn btn-primary">Agregar linea</button>
 	<br><br>
 
@@ -44,23 +53,29 @@
 	(function(){
 		
 		var contador = 1;
-		var numero = 3;
 		var total = 0;
 		
 		$("#bot1").on("click","",function () {
+			var numero = $("#base").val();
 			total=contador * numero;
-			var multiplica = "<tr id='tr-"+ contador+"'>"+
-				"<th>"+numero+"</th>"  +
-				"<th>x</th>" +
-				"<th>"+contador+"</th>"+
-				"<th>=</th>"+
-				"<th>"+total+"</th> </tr>";
+			var multiplica ="<tr id='tr-"+ contador+"'>"+
+								"<th>"+numero+"</th>"  +
+								"<th>x</th>" +
+								"<th>"+contador+"</th>"+
+								"<th>=</th>"+
+								"<th>"+total+"</th>"+
+							" </tr>";
 
 			//$("body").prepend(h3Dinamico);
 
 			$(".table").append(multiplica);
 			contador++;
 			
+			//Funcion que detecta el cambio de la base
+			$("#base").on("change",function () {
+				$("tr").not(":eq(0)").remove();
+				contador=1;
+			});
 		});
 		
 	})();
