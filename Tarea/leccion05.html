@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>TAREA</title>
+
+	<!-- Importacion del jQuery -->
+	<script src="js/lib/jquery-2.1.4.min.js"></script>
+	
+	<!-- Importacion del Bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+
+<div class="container">
+	
+	<h1>Tabla de multiplicar</h1>
+	<hr>
+	<button id="bot1" class="btn btn-primary">Agregar linea</button>
+	<br><br>
+
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Base</th>
+				<th>x</th>
+				<th>Numero</th>
+				<th>=</th>
+				<th>Resultado</th>
+			</tr>
+		</thead>
+	</table>
+
+
+</div>
+
+
+<script>
+
+	(function(){
+		
+		var contador = 1;
+		var numero = 3;
+		var total = 0;
+		
+		$("#bot1").on("click","",function () {
+			total=contador * numero;
+			var multiplica = "<tr id='tr-"+ contador+"'>"+
+				"<th>"+numero+"</th>"  +
+				"<th>x</th>" +
+				"<th>"+contador+"</th>"+
+				"<th>=</th>"+
+				"<th>"+total+"</th> </tr>";
+
+			//$("body").prepend(h3Dinamico);
+
+			$(".table").append(multiplica);
+			contador++;
+			
+		});
+		
+	})();
+</script>
+
+</body>
+</html>
