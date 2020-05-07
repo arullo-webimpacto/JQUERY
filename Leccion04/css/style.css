@@ -1,0 +1,14 @@
+dd{
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+}
+
+dt{
+    text-align: center;
+    cursor: pointer;
+    font-size: 18px;
+    background-color: #e3e3e3;
+    border-bottom: 1px solid #c5c5c5;
+    border-top:  1px solid white;
+}
