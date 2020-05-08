@@ -1,0 +1,13 @@
+.cajaRoja{
+
+	position: relative;
+	width: 100px;
+	height: 100px;
+	margin-left: auto;
+  	margin-right: auto;
+	background-color: red;
+
+}
+.container{
+	text-align: center;
+}
