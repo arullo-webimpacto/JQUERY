@@ -1,0 +1,17 @@
+.divLoading{
+    position: relative;
+    top: 40%;
+    font-size: 30px;
+}
+.divInfo{
+    display: none;
+}
+.imgClima{
+    margin-top: 130px;
+}
+.lblTemperatura{
+    font-size: 80px;
+}
+.lblCiudad{
+    margin-top: 40px;
+}
