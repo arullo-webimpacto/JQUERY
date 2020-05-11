@@ -12,7 +12,8 @@
 	<!-- Importacion del Bootstrap -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 
-	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
 
 
 
@@ -23,28 +24,40 @@
 	
 	<h1>Peticiones Ajax, <small> jquery</small></h1>
 	<hr>
+    <div>
+        <a href="insert.html" class="btn btn-primary"><i class="fa fa-plus"></i>Insertar Registro</a>
+        <br><br><br>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <td class="">ID</td>
+                <td>Nombre</td>
+                <td class="">Actualizar</td>
+                <td class="">Eliminar</td>
+            </tr>
+        </thead>
+        <tbody id="tblResgistros">
+            <!-- <tr>
+                <td>3</td>
+                <td>Fernando</td>
+                <td class="">
+                    <a href="" class="btn btn-primay "> <i class="fa fa-edit"></i> Actualizar</a>
+                </td>
+                <td class="">
+                    <a href="" data-id="1" class="btn btn-danger"><i class="far fa-trash-alt"></i>Eliminar</a>
+                </td>
+            </tr> -->
+        </tbody>
 
-	<form class="form-horizontal" id="frmData">
-
-		<label >Nombre</label>
-		<input type="text" name="txtnombre" class="form-control">
-
-		<label >Estado</label>
-		<select name="cmbestado" class="form-control">
-			<option value="activo">Activo</option>
-			<option value="eliminado">Eliminado</option>
-		</select>
-
-		<br>
-		<button type="submit" class="btn btn-primary">Guardar</button>
-
-	</form>
+    </table>
+	
 
 </div>
 
 
 
-<script src="js/ajax.js"></script>
+<script src="js/select.js"></script>
 
 
 
