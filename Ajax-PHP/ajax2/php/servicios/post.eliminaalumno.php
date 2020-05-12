@@ -3,15 +3,10 @@
 include_once("../classes/class.Database.php");
 
 
-$id = $_POST['txtid'];
-$nombre = $_POST['txtnombre'];
-$estado = $_POST['cmbestado'];
+$id = $_GET['id'];
 
 
-// $nombre = mysql_real_escape_string($nombre);
-
-
-$sql = "UPDATE alumnos set nombre = '$nombre', estado = '$estado' where id=$id";
+$sql = "DELETE FROM alumnos where id=$id";
 
 
 $hecho = Database::ejecutar_idu( $sql );
